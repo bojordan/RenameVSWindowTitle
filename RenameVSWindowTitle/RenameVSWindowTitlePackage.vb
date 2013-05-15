@@ -294,7 +294,7 @@ Public NotInheritable Class RenameVSWindowTitle
             parentPath = GetParentPath(parents:=parents)
             pattern = ReplaceParentTags(pattern:=pattern, parents:=parents)
         End If
-        Return pattern.Replace("[documentName]", documentName).Replace("[solutionName]", solutionName).Replace("[parentPath]", parentPath).Replace("[ideName]", Me.IDEName) + " *"
+        Return pattern.Replace("[documentName]", documentName).Replace("[solutionName]", solutionName).Replace("[parentPath]", parentPath).Replace("[ideName]", Me.IDEName) ''' + " *"
     End Function
 
     Private Function GetParentPath(ByVal parents As String()) As String
